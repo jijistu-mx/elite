@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elite Programers</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <a href="index.html" class="brand-link">
+          <img src="logo.svg" alt="Elite Programers logo" class="logo" />
+        </a>
+        <div class="actions">
+          <input id="search" placeholder="Search name, title, skills..." />
+          <button id="showForm">Add Profile</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="services">
+        <h2>Services Provided</h2>
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>Advertise Yourself</h3>
+            <p>Create a profile to show your skills, experience, and sample work to customers.</p>
+          </article>
+          <article class="service-card">
+            <h3>Connect with Clients</h3>
+            <p>Share your contact details so customers can message you directly by email or phone.</p>
+          </article>
+          <article class="service-card">
+            <h3>Collaborate</h3>
+            <p>Find other programmers, form teams, and work together on projects.</p>
+          </article>
+          <article class="service-card">
+            <h3>Showcase Work</h3>
+            <p>Display your portfolio items and sample projects in a clean, modern layout.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="controls">
+        <label>Filter by skill: <input id="skillFilter" placeholder="e.g. React" /></label>
+        <button id="importSamples">Load Samples</button>
+        <button id="clearStorage">Clear All</button>
+      </section>
+
+      <section id="profiles" class="grid"></section>
+    </main>
+
+    <div id="modal" class="modal hidden">
+      <form id="profileForm" class="modal-content">
+        <h2>Add / Edit Profile</h2>
+        <label>Name <input name="name" required /></label>
+        <label>Title <input name="title" required /></label>
+        <label>Skills (comma-separated) <input name="skills" /></label>
+        <label>Bio <textarea name="bio"></textarea></label>
+        <label>Portfolio URLs (comma-separated) <input name="portfolio" /></label>
+        <label>Profile image URL <input name="avatar" placeholder="https://..." /></label>
+        <label>Sample work image URLs (comma-separated) <input name="samples" placeholder="https://..." /></label>
+        <label>Contact email <input type="email" name="email" /></label>
+        <label>Contact phone <input name="phone" placeholder="+1234567890" /></label>
+        <div class="form-actions">
+          <button type="submit">Save</button>
+          <button type="button" id="cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">Open this file in a browser to use the app.</div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
